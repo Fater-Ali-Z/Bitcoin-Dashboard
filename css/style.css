@@ -1,0 +1,297 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.sidebar {
+    width: 50px;
+    background-color: #0148cc;
+    height: 100vh;
+    color: white;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+.sidebar i {
+    padding: 10px 12px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.sidebar i:hover {
+    background-color: #4787ffa1;
+}
+.container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: calc(100% - 50px);
+    height: 100vh;
+    background-color: #fcfcfc;
+    
+}
+.container .nav {
+    padding: 30px;
+    height: 50px;
+    width: 100%;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr repeat(3, auto);
+    grid-template-areas: "logo bitcoin dollar account";
+    align-items: center;
+    justify-items: start;
+}
+.container .logo {
+    font-size: 20px;
+    color: #0148cc;
+    font-weight: bold;
+}
+.container .logo i {
+    margin-right: 5px;
+}
+.container .bitcoin,
+.container .dollar,
+.container .account {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    color: #0148cc;
+}
+.container .bitcoin {
+    grid-area: bitcoin;
+    width: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    background-color: #538fff15;
+    outline: 1px solid #538fff15;
+    border-right: none;
+
+}
+.container .dollar {
+    grid-area: dollar;
+    width: 100px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    outline: 1px solid #538fff15;
+    margin-left: 1.5px;
+}
+.container .account {
+    grid-area: account;
+    display:flex;
+}
+.container .account select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #003caa;
+    font-weight: bold;
+}
+.container .account i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+.container .welcome {
+    padding-left: 30px;
+    display: flex;
+    color: #0148cc;
+    font-size: 13px;
+
+
+}
+.container .welcome h4 {
+    margin-right: 3px;
+}
+.container .operations {
+    width: 40%;
+    height: calc(100% - 116px);
+    padding-top: 10px;
+    
+}
+.container .operations .b-s {
+    width: 90%;
+    margin: 20px auto;
+    margin-bottom: -3px;
+    height: fit-content;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+.container .operations .buy, 
+.container .operations .sell{
+    width: 45%;
+    margin: 5px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.container .operations .buy{
+    background-color: #0148cc;
+    color: white;
+}
+.container .operations .buy:hover{
+    background-color: #003caa;
+}
+.container .operations .sell{
+    background-color: #538fff15;
+    color: #0148cc;
+}
+.container .operations .sell:hover{
+    background-color: #0059ff15;
+}
+.container .currency {
+    width: 100%;
+    padding: 20px;
+}
+.container .currency table {
+    width: 100%;
+    border-spacing: 0;
+    margin-bottom: 20px;
+}
+.container .currency table tr.inp td{
+    padding: 20px;
+    background-color: #538fff15;
+    font-size: 14px;
+    color: #003caa;
+}
+.container .currency table tr .th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+.container .currency table tr td.b-l{
+    border-bottom-left-radius: 5px;    
+    border-top-left-radius: 5px;    
+}
+.container .currency table tr td.b-r{
+    border-bottom-right-radius: 5px;    
+    border-top-right-radius: 5px;
+
+}
+.container .currency table tr td.b-r.transp.jus {
+    padding-left: 60px;
+}
+.container .currency table tr td.end{
+    text-align: end;
+}
+.container .currency table tr.inp td select {
+    background-color: transparent;
+    padding-left: 20px;
+    color: #003caa;
+    border: none;
+    outline: none;
+}
+
+.container .currency table tr.inp td.transp {
+    color: #003caa8c;
+}
+.container .currency table tr td.transps {
+    color: #0000008c;
+}
+.container .currency table tr td.ex .ex {
+    background-color: #02cf7a;
+    width: 100%;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+} 
+.container .currency table tr td.ex .ex:hover {
+    background-color: #00ac64;   
+}
+.container .operations .note p{
+    opacity: 0.7;
+    font-size: 12px;
+}
+.container .sales {
+    position: absolute;
+    right: 0px;
+    top: 103px;
+    width: 60%;
+    height: calc(100% - 103px);
+    padding: 0px 20px;
+}
+.container .sales .b-s {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.container .sales .b-s img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.container .sales .b-s .b-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .sales .b-s .b-info .info {
+    margin-left: 10px;
+    line-height: 20px;
+}
+.container .sales .b-s .s-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.container .sales .b-s .s-info .info {
+    margin-right: 10px;
+    direction: rtl;
+    line-height: 20px;
+}
+.container .sales .b-s .header {
+    font-size: 16px;
+}
+.container .sales .b-s .name-email {
+    font-size: 14px;
+}
+.container .sales .b-s .e {
+    color: #003caa;
+    margin-top: 5px;
+}
+.container .sales table {
+    margin-top: 45px;
+    width: 100%;
+    border-spacing: 0 7px;
+}
+.container .sales table td {
+    background-color: #538fff15;
+    padding: 15px;
+    color: #00297485;
+    font-size: 14px;
+}
+.container .sales table tr td.b-l{
+    border-bottom-left-radius: 5px;    
+    border-top-left-radius: 5px;    
+}
+.container .sales table tr td.b-r{
+    border-bottom-right-radius: 5px;    
+    border-top-right-radius: 5px;    
+}
+.container .sales table tr td.h {
+    color: #004bd6;
+}
+.container .sales table tr td.vat {
+    color: red;
+}
