@@ -29,6 +29,9 @@ body {
 .sidebar i:hover {
     background-color: #4787ffa1;
 }
+.sidebar .fa-right-left {
+    background-color: #4787ffa1;
+}
 .container {
     position: fixed;
     right: 0;
